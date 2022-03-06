@@ -12,7 +12,7 @@ A key element in simulation is fitting the simulator to the product under develo
 
 We'd like to run the native Webots Mac application, because tunneling graphics drivers is complicated, as is dual-booting.
 
-But installing ROS on Mac is complicated. We'd prefer to use a prebuilt Docker image from the ROS community (ros:noetic) to run the robot in a container running Linux and ROS.
+But installing ROS on Mac is also complicated. Instead, we'd prefer to use a prebuilt Docker image from the ROS community (ros:noetic) to run the robot in a container running Linux and ROS.
 
 Webots provides [few tools](https://cyberbotics.com/doc/guide/using-ros) to interface Webots and ROS. The ideal scenario is when both sides are on the same Linux host, since a built-in solution is provided. In other scenarios that share a host, a single piece of code can be written, bridging the Webots and ROS APIs to serve both as a Webots [extern controller](https://cyberbotics.com/doc/guide/running-extern-robot-controllers) and a ROS node (example from docs: [ros_python.py](https://docs.ros.org/en/melodic/api/webots_ros/html/ros__python_8py_source.html)).
 
