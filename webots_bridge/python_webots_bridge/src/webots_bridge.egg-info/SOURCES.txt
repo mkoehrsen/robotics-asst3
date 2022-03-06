@@ -1,0 +1,13 @@
+pyproject.toml
+setup.cfg
+bin/ros_endpoint.py
+bin/webots_endpoint.py
+src/webots_bridge/__init__.py
+src/webots_bridge/connection.py
+src/webots_bridge/devices.py
+src/webots_bridge/messages.py
+src/webots_bridge/util.py
+src/webots_bridge.egg-info/PKG-INFO
+src/webots_bridge.egg-info/SOURCES.txt
+src/webots_bridge.egg-info/dependency_links.txt
+src/webots_bridge.egg-info/top_level.txt

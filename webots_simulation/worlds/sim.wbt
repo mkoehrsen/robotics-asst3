@@ -1,0 +1,29 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.07171728480028662 0.11654709797000011 0.9905924515236556 1.1117551172580664
+  position -0.241913649550684 -2.036919051600932 0.6080357629285599
+  follow "Pioneer 3-DX"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorTileSize 0.25 0.25
+  wallHeight 0.05
+}
+WoodenBox {
+}
+Pioneer3dx {
+  translation 0.94 0 0.0975
+  controller "<extern>"
+  extensionSlot [
+    Camera {
+      translation 0 0 0.26
+      width 640
+      height 480
+    }
+  ]
+}
