@@ -22,7 +22,7 @@ Our custom code uses the `extern controller` technique, but since the Webots and
 
 ### Step 1 – Install and start lima (an analogue for Docker[^docker_coexist])
 1. `brew install lima`
-1. `lima start`
+1. `limactl start`
 
 [^docker_coexist]:I believe Docker and Lima can coexist.
 
