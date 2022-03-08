@@ -31,7 +31,13 @@ sleep 5
 
 # start the Webots side
 WEBOTS_HOME=/Applications/Webots.app
+# Assume if we're on arm then we're not using brew
+if [ $(arch) = "arm64" ]
+then
+    export PYTHONPATH=$PYTHONPATH:"$WEBOTS_HOME"/lib/controller/python39
+else
+    export PYTHONPATH=$PYTHONPATH:"$WEBOTS_HOME"/lib/controller/python39_brew
+fi
 env \
     DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH":"$WEBOTS_HOME"/lib/controller \
-    PYTHONPATH=$PYTHONPATH:"$WEBOTS_HOME"/lib/controller/python39_brew \
-    "$VENV"/bin/webots_endpoint.py localhost $PORT
+    arch -arch X86_64 "$VENV"/bin/webots_endpoint.py localhost $PORT
