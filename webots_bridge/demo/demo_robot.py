@@ -15,13 +15,13 @@ def xTwist(linear, angular):
 	return t
 
 for i in range(10):
-	pub.publish(xTwist(3,0))
+	pub.publish(xTwist(10,0))
 	rate.sleep()
-	pub.publish(xTwist(0,3))
+	pub.publish(xTwist(0,10))
 	rate.sleep()
-	pub.publish(xTwist(3,0))
+	pub.publish(xTwist(0,-10))
 	rate.sleep()
-	pub.publish(xTwist(-3,-3))
+	pub.publish(xTwist(-10,0))
 	rate.sleep()
 
 pub.publish(xTwist(0,0))
