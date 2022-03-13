@@ -31,14 +31,13 @@ Double-click `sim.wbt` under `webots-simulation/worlds`[^auto_open].
 
 [^auto_open]:If you ever want to automate this, you can use `open -a Webots webots-simulation/worlds/sim.wbt`.
 
-### Step 3 – Run the demo
+### Step 3 – Start the robot
+In a dedicated terminal, run `./startup/start_guest.sh robo_chaser 9999`
 
-Run `webots_bridge/demo/run_demo.sh`, then bring Webots back to the foreground to watch the simulation.
+This starts a Docker container and runs the robot within it.
 
-This program sets up the Linux and Mac sides of the bridge and drives a sample robot in Webots.
+### Step 4 – Start the webots bridge
+In another dedicated terminal, run `./startup/start_host.sh 9999`
 
-It encapsulates the following tasks:
-1. Build the webots bridge for the Mac
-1. Build the Docker image containing ROS and another build of the webots bridge
-1. Startup the container and launch roscore, the ROS endpoint, and a sample robot
-1. Startup the Webots endpoint
+### Step 5 – Drive the robot
+Type commands into the robot, and watch it move in Webots.
