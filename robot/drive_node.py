@@ -63,6 +63,9 @@ class AutoMode(object):
         rospy.Subscriber('/target_radius', UInt16, self.set_target_radius)
         rospy.Subscriber('/image_width', UInt16, self.set_image_width)
         self.command_pub = rospy.Publisher('/command', String, queue_size=10)
+        self.image_width = 0
+        self.target_radius = 0
+        self.target_coord = Point(0,0,0)
         
     def set_image_width(self, msg):
         self.image_width = msg.data
