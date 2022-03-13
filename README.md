@@ -18,7 +18,7 @@ Webots provides [few tools](https://cyberbotics.com/doc/guide/using-ros) to inte
 
 Our custom code uses the `extern controller` technique, but since the Webots and ROS components are on different hosts, the APIs can't be bridged through direct method calls. Instead, a TCP socket is established between a ROS node endpoint and a Webots controller endpoint, and the two sides communicate with each other by reading and writing serialized messages.
 
-## Demo
+## Running the robot
 
 ### Step 1 – Install and start lima (an analogue for Docker[^docker_coexist])
 1. `brew install lima`
