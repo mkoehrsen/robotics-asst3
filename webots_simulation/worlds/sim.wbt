@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.07171728480028662 0.11654709797000011 0.9905924515236556 1.1117551172580664
-  position -0.241913649550684 -2.036919051600932 0.6080357629285599
+  orientation 0.10959922404187616 -0.05705852478200844 -0.9923368051418429 4.095305935613564
+  position 3.241390233984316 -3.372854640312363 0.8589941064787966
   follow "Pioneer 3-DX"
 }
 TexturedBackground {
@@ -24,6 +24,20 @@ Pioneer3dx {
       translation 0 0 0.26
       width 640
       height 480
+    }
+  ]
+}
+Solid {
+  translation 2.34 0 0.22
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        emissiveColor 1 1 0
+      }
+      geometry Sphere {
+        radius 0.1
+      }
     }
   ]
 }
