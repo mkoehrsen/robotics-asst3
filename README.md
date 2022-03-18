@@ -24,12 +24,12 @@ Our custom code uses the `extern controller` technique, but since the Webots and
 1. `brew install lima`
 1. `limactl start`
 
-[^docker_coexist]:I believe Docker and Lima can coexist.
+[^docker_coexist]: I believe Docker and Lima can coexist.
 
 ### Step 2 – Open the robot world in Webots
 Double-click `sim.wbt` under `webots-simulation/worlds`[^auto_open].
 
-[^auto_open]:If you ever want to automate this, you can use `open -a Webots webots-simulation/worlds/sim.wbt`.
+[^auto_open]: If you ever want to automate this, you can use `open -a Webots webots-simulation/worlds/sim.wbt`.
 
 ### Step 3 – Start the robot
 In a dedicated terminal, run `./startup/start_guest.sh robo_chaser 9999`
