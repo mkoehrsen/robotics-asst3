@@ -34,7 +34,7 @@ Double-click `sim.wbt` under `webots-simulation/worlds`[^auto_open].
 ### Step 3 – Start the robot
 In a dedicated terminal, run `./startup/start_guest.sh robo_chaser 9999`
 
-This starts a Docker container and runs the robot within it.
+This starts a Docker container and runs the robot within it. To have the robot chase the ball, enter `a` to put it in auto mode -- it will start chasing once the bridge is up and running.
 
 ### Step 4 – Start the webots bridge
 In another dedicated terminal, run `./startup/start_host.sh 9999`
