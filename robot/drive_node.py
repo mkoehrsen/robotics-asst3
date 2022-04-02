@@ -55,7 +55,7 @@ motor_pub = rospy.Publisher("motor", Twist, queue_size=10)
 class AutoMode(object):
     """ Listen to data from the vision node, and navigate there when asked. """
 
-    MIN_TGT_RADIUS = .0001
+    MIN_TGT_RADIUS_PERCENT = .010
     CENTER_WIDTH_PERCENT = 0.25
 
     def __init__(self):
@@ -82,7 +82,7 @@ class AutoMode(object):
         Return True if that decision was to pursue.
         """
         if (
-            self.target_radius >= self.image_width * self.MIN_TGT_RADIUS
+            self.target_radius >= self.image_width * self.MIN_TGT_RADIUS_PERCENT
         ):
             if self.target_radius <= self.image_width/3:
                 if abs(self.target_coord.x) <= self.image_width * self.CENTER_WIDTH_PERCENT:
