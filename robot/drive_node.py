@@ -55,7 +55,7 @@ motor_pub = rospy.Publisher("motor", Twist, queue_size=10)
 class AutoMode(object):
     """ Listen to data from the vision node, and navigate there when asked. """
 
-    MIN_TGT_RADIUS_PERCENT = .010
+    MIN_TGT_RADIUS_PERCENT = 0.010
     CENTER_WIDTH_PERCENT = 0.25
 
     def __init__(self):
