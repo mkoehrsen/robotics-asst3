@@ -83,22 +83,25 @@ class AutoMode(object):
         """
         if (
             self.target_radius >= self.image_width * self.MIN_TGT_RADIUS_PERCENT
-            and
-            self.target_radius <= self.image_width/5
         ):
-            if abs(self.target_coord.x) <= self.image_width * self.CENTER_WIDTH_PERCENT:
-                forward()
-            elif self.target_coord.x < 0:
-                left()
-            elif self.target_coord.x > 0:
-                right()
+            if self.target_radius <= self.image_width/3:
+                if abs(self.target_coord.x) <= self.image_width * self.CENTER_WIDTH_PERCENT:
+                    forward()
+                elif self.target_coord.x < 0:
+                    left()
+                elif self.target_coord.x > 0:
+                    right()
+                else:
+                    raise Exception("Shouldn't happen...double-check logic for the cases?")
+                return True
             else:
-                raise Exception("Shouldn't happen...double-check logic for the cases?")
-            return True
+                print("Reached target, stopping")
+                self.command_pub.publish("stop")
+                return False
         else:
-            print("Auto mode chose to stop. Radius:", self.target_radius)
-            self.command_pub.publish("stop")
-            return False
+            print("Target not found, waiting")
+            stopMotors()
+            return True
     
 def publish_twist(lin, ang):
     t = Twist()
